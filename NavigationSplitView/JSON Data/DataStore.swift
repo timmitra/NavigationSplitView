@@ -13,6 +13,11 @@ import Foundation
 class DataStore: ObservableObject {
     @Published var companies: [Company] = []
     @Published var employees: [Employee] = []
+    @Published var employeeFilter = ""
+    
+    var filteredEmployees: [Employee] {
+        employeeFilter.isEmpty ? employees : employees.filter { $0.fullName.lowercased().contains(employeeFilter.lowercased()) }
+    }
 
     init() {
         loadData()
@@ -39,5 +44,9 @@ class DataStore: ObservableObject {
         }
         companies = companies.sorted(using: KeyPathComparator(\.name))
         employees = employees.sorted(using: KeyPathComparator(\.lastName))
+    }
+    
+    func employee(id: String) -> Employee? {
+        employees.first(where: { $0.id == id })
     }
 }

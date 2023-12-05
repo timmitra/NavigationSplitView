@@ -15,21 +15,25 @@ struct EmployeeListView: View {
     
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.doubleColumn)) {
-            List(store.employees, selection: $employeeId) { employee in
+            List(store.filteredEmployees, selection: $employeeId) { employee in
                 Text(employee.fullName)
                     .font(.title)
             }
+            .searchable(text: $store.employeeFilter)
             .navigationTitle("Employees")
         } detail: {
             if let employeeId = employeeId {
                 Text(employeeId)
             } else {
                 Image("employee")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300)
             }
         }
         .navigationSplitViewStyle(.balanced)
 
-        Text("2 Column Employee List Vidw")
+        Text("2 Column Employee List View")
     }
 }
     
