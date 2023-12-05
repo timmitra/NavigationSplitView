@@ -27,6 +27,7 @@ struct EmployeeListView: View {
                 Image("employee")
             }
         }
+        .navigationSplitViewStyle(.balanced)
 
         Text("2 Column Employee List Vidw")
     }
