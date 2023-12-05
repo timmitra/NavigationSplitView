@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A7379332B1FE01B008889D2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7379322B1FE01A008889D2 /* DataStore.swift */; };
+		2A7379352B1FEB7F008889D2 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7379342B1FEB7F008889D2 /* EmployeeView.swift */; };
 		BB5988F828A37D4F006A1614 /* MOCK_DATA.json in Resources */ = {isa = PBXBuildFile; fileRef = BB5988F728A37D4F006A1614 /* MOCK_DATA.json */; };
 		BB80BDC028A2E1490096746A /* StartTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80BDBF28A2E1490096746A /* StartTabView.swift */; };
 		BB80BDC228A2E7390096746A /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80BDC128A2E7390096746A /* EmployeeListView.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		2A7379322B1FE01A008889D2 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = "JSON Data/DataStore.swift"; sourceTree = "<group>"; };
+		2A7379342B1FEB7F008889D2 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
 		BB5988F728A37D4F006A1614 /* MOCK_DATA.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MOCK_DATA.json; sourceTree = "<group>"; };
 		BB80BDBF28A2E1490096746A /* StartTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabView.swift; sourceTree = "<group>"; };
 		BB80BDC128A2E7390096746A /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				BB80BDBF28A2E1490096746A /* StartTabView.swift */,
 				BB80BDC128A2E7390096746A /* EmployeeListView.swift */,
 				BBAD59A9288BAFB700FB853D /* CompaniesListView.swift */,
+				2A7379342B1FEB7F008889D2 /* EmployeeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7379352B1FEB7F008889D2 /* EmployeeView.swift in Sources */,
 				BBAD59B6288BAFE300FB853D /* JSONModels.swift in Sources */,
 				BBAD59BC288BB02D00FB853D /* Bundle+Extension.swift in Sources */,
 				2A7379332B1FE01B008889D2 /* DataStore.swift in Sources */,
