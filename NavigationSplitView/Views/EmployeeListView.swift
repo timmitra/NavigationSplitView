@@ -11,7 +11,23 @@ import SwiftUI
 
 struct EmployeeListView: View {
     @EnvironmentObject var store: DataStore
+    @State private var employeeId: String?
+    
     var body: some View {
+        NavigationSplitView(columnVisibility: .constant(.doubleColumn)) {
+            List(store.employees, selection: $employeeId) { employee in
+                Text(employee.fullName)
+                    .font(.title)
+            }
+            .navigationTitle("Employees")
+        } detail: {
+            if let employeeId = employeeId {
+                Text(employeeId)
+            } else {
+                Image("employee")
+            }
+        }
+
         Text("2 Column Employee List Vidw")
     }
 }
