@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct CompaniesListView: View {
+    @EnvironmentObject var store: DataStore
     var body: some View {
         Text("3 Column Companies ListView")
     }
@@ -18,5 +19,6 @@ struct CompaniesListView: View {
 struct CompaniesListView_Previews: PreviewProvider {
     static var previews: some View {
         CompaniesListView()
+            .environmentObject(DataStore())
     }
 }

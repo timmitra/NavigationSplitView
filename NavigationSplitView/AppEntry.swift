@@ -12,9 +12,13 @@ import SwiftUI
 
 @main
 struct AppEntry: App {
+    
+    @State var store = DataStore()
+    
     var body: some Scene {
         WindowGroup {
             StartTabView()
+                .environmentObject(store)
         }
     }
 }

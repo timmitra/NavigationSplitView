@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct StartTabView: View {
+    @EnvironmentObject var store: DataStore
     var body: some View {
         TabView {
             EmployeeListView()
@@ -29,5 +30,6 @@ struct StartTabView: View {
 struct StartTabView_Previews: PreviewProvider {
     static var previews: some View {
         StartTabView()
+            .environmentObject(DataStore())
     }
 }
