@@ -11,7 +11,7 @@ import SwiftUI
 
 struct EmployeeListView: View {
     @EnvironmentObject var store: DataStore
-    @State private var employeeId: String?
+    @State private var employeeId: Employee.ID?
     
     var body: some View {
         NavigationSplitView(columnVisibility: .constant(.doubleColumn)) {
